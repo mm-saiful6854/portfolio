@@ -1,44 +1,46 @@
-# portfolio-md-saiful-islam
+# Md Saiful Islam Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Professional Vue 3 portfolio for Md Saiful Islam, focused on senior backend engineering, fintech microservices, distributed systems, and cloud-native delivery.
 
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Local Development
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Production Build
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+The portfolio builds to `dist/` and is served by Nginx in the Docker image.
+
+## Quality Checks
 
 ```sh
 npm run lint
 ```
+
+## Content
+
+Portfolio content lives in `src/data/profile.js`. Update that file when changing experience, projects, skills, achievements, contact links, or resume path.
+
+The public resume file is served from:
+
+```text
+public/Md_Saiful_Islam_Resume_latest.pdf
+```
+
+## Docker Deployment
+
+This repo includes a Docker setup for:
+
+- Vue portfolio served by Nginx
+- WordPress blog
+- MariaDB database
+- Nginx public reverse proxy
+- Certbot volumes for HTTPS certificates
+
+See `deploy/README.md` for Oracle Cloud setup, domain replacement, and HTTPS steps.

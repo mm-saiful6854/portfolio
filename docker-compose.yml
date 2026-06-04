@@ -1,0 +1,77 @@
+services:
+  nginx-proxy:
+    image: nginx:1.27-alpine
+    container_name: nginx-proxy
+    restart: unless-stopped
+    depends_on:
+      - portfolio
+      - wordpress
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/nginx/conf.d:/etc/nginx/conf.d:ro
+      - certbot-www:/var/www/certbot
+      - certbot-certs:/etc/letsencrypt
+    networks:
+      - public
+
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio
+    restart: unless-stopped
+    networks:
+      - public
+
+  wordpress:
+    image: wordpress:6.7-php8.3-apache
+    container_name: wordpress
+    restart: unless-stopped
+    depends_on:
+      - wordpress-db
+    environment:
+      WORDPRESS_DB_HOST: wordpress-db:3306
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+    volumes:
+      - wordpress-files:/var/www/html
+    networks:
+      - public
+      - private
+
+  wordpress-db:
+    image: mariadb:11.4
+    container_name: wordpress-db
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: ${WORDPRESS_DB_NAME}
+      MARIADB_USER: ${WORDPRESS_DB_USER}
+      MARIADB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+    volumes:
+      - wordpress-db:/var/lib/mysql
+    networks:
+      - private
+
+  certbot:
+    image: certbot/certbot:v2.11.0
+    container_name: certbot
+    volumes:
+      - certbot-www:/var/www/certbot
+      - certbot-certs:/etc/letsencrypt
+    profiles:
+      - tools
+
+volumes:
+  wordpress-files:
+  wordpress-db:
+  certbot-www:
+  certbot-certs:
+
+networks:
+  public:
+  private:
+    internal: true
