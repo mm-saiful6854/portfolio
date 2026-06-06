@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 env:
-  IMAGE_NAME: ${{ vars.DOCKERHUB_IMAGE || 'mm-saiful6854/portfolio-md-saiful-islam' }}
+  IMAGE_NAME: ${{ vars.DOCKERHUB_IMAGE || 'mmsaiful6854/portfolio' }}
 
 jobs:
   quality:
