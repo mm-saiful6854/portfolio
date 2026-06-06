@@ -1,6 +1,6 @@
 services:
   portfolio:
-    image: ${PORTFOLIO_IMAGE:-mm-saiful6854/portfolio-md-saiful-islam:latest}
+    image: ${PORTFOLIO_IMAGE:mmsaiful6854/portfolio:latest}
     container_name: portfolio
     restart: unless-stopped
     pull_policy: always
