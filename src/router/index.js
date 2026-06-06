@@ -8,7 +8,7 @@ const routes = [
     component: HomeView,
     meta: {
       title: 'Md Saiful Islam | Senior Software Engineer',
-      description: 'Portfolio of Md Saiful Islam, a senior backend and cloud engineer in Dhaka, Bangladesh.',
+      description: 'Portfolio of Md Saiful Islam, a senior backend and cloud engineer.',
     },
   },
   {
