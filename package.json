@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "run-s lint:*",
+    "lint": "run-s lint:oxlint lint:eslint",
+    "lint:check": "run-p lint:check:*",
+    "lint:check:oxlint": "oxlint .",
+    "lint:check:eslint": "eslint .",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/"

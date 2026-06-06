@@ -21,6 +21,7 @@ The portfolio builds to `dist/` and is served by Nginx in the Docker image.
 
 ```sh
 npm run lint
+npm run lint:check
 ```
 
 ## Content
@@ -35,12 +36,25 @@ public/Md_Saiful_Islam_Resume_latest.pdf
 
 ## Docker Deployment
 
-This repo includes a Docker setup for:
+This repo includes a portfolio-only Docker image and delivery pipeline:
 
+- Multi-stage Node build
 - Vue portfolio served by Nginx
-- WordPress blog
-- MariaDB database
-- Nginx public reverse proxy
-- Certbot volumes for HTTPS certificates
+- SPA route fallback for direct route visits
+- Static asset caching and gzip compression
+- Embedded container health check
+- Multi-architecture Docker Hub publishing through GitHub Actions
 
-See `deploy/README.md` for Oracle Cloud setup, domain replacement, and HTTPS steps.
+Build and start it locally:
+
+```sh
+docker compose up -d --build
+```
+
+The site is available on `http://localhost` by default. Use `PORT=8080 docker compose up -d --build` when port `80` is already occupied.
+
+The GitHub Actions workflow publishes Docker Hub images on pushes to `main` and version tags. Oracle Cloud can pull and run the published image without cloning this repository.
+
+See `deploy/README.md` for Docker Hub secrets, image tags, Oracle SSH deployment commands, updates, and HTTPS guidance.
+
+WordPress is intentionally outside this repository and can be added later as an independent deployment.
