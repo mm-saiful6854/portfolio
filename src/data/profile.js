@@ -4,7 +4,7 @@ export const profile = {
   location: 'Dhaka, Bangladesh',
   email: 'sm.saiful.maahi@gmail.com',
   phone: '+880 1521428565',
-  linkedin: 'https://linkedin.com/in/md-saiful',
+  linkedin: 'https://www.linkedin.com/in/md-saiful-islam-it-person/',
   github: 'https://github.com/mm-saiful6854',
   resumeUrl: '/Md_Saiful_Islam_Resume_latest.pdf',
   summary:
