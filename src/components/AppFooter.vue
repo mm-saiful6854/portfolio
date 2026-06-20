@@ -13,6 +13,9 @@ import { profile } from '@/data/profile'
       <a :href="profile.linkedin" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
         <Icon icon="lucide:linkedin" aria-hidden="true" />
       </a>
+      <a :href="profile.googleScholar" target="_blank" rel="noreferrer" aria-label="Google Scholar profile">
+        <Icon icon="simple-icons:googlescholar" aria-hidden="true" />
+      </a>
       <a :href="`mailto:${profile.email}`" aria-label="Send email">
         <Icon icon="lucide:mail" aria-hidden="true" />
       </a>

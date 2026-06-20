@@ -7,6 +7,7 @@ const contacts = [
   { label: 'Phone', value: profile.phone, href: `tel:${profile.phone.replaceAll(' ', '')}`, icon: 'lucide:phone' },
   { label: 'LinkedIn', value: 'linkedin.com/in/md-saiful', href: profile.linkedin, icon: 'lucide:linkedin' },
   { label: 'GitHub', value: 'github.com/mm-saiful6854', href: profile.github, icon: 'lucide:github' },
+  { label: 'Google Scholar', value: 'scholar.google.com/saiful', href: profile.googleScholar, icon: 'simple-icons:googlescholar' },
   { label: 'Location', value: profile.location, href: null, icon: 'lucide:map-pin' },
 ]
 </script>

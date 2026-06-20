@@ -21,6 +21,16 @@ const routes = [
     },
   },
   {
+    path: '/research',
+    name: 'research',
+    component: () => import('@/views/ResearchView.vue'),
+    meta: {
+      title: 'Research | Md Saiful Islam',
+      description:
+        'Research profile of Md Saiful Islam, including publications, Google Scholar, HCI, IoT, machine learning, and medical imaging interests.',
+    },
+  },
+  {
     path: '/projects',
     name: 'projects',
     component: () => import('@/views/ProjectsView.vue'),

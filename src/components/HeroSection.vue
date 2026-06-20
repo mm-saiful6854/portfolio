@@ -23,17 +23,23 @@ import { profile } from '@/data/profile'
       </div>
     </div>
 
-    <aside class="hero-panel" aria-label="Engineering focus">
-      <div>
-        <span>Current focus</span>
-        <strong>Fintech microservices at scale</strong>
-      </div>
-      <ul>
-        <li v-for="area in profile.focusAreas" :key="area">
-          <Icon icon="lucide:check-circle-2" aria-hidden="true" />
-          {{ area }}
-        </li>
-      </ul>
-    </aside>
+    <div class="hero-visual">
+      <figure class="portrait-card">
+        <img :src="profile.imageUrl" alt="Portrait of Md Saiful Islam" width="1126" height="1124" />
+      </figure>
+
+      <aside class="hero-panel" aria-label="Engineering and research focus">
+        <div>
+          <span>Current focus</span>
+          <strong>Cloud systems with research depth</strong>
+        </div>
+        <ul>
+          <li v-for="area in profile.focusAreas" :key="area">
+            <Icon icon="lucide:check-circle-2" aria-hidden="true" />
+            {{ area }}
+          </li>
+        </ul>
+      </aside>
+    </div>
   </section>
 </template>

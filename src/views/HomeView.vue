@@ -3,9 +3,10 @@ import { RouterLink } from 'vue-router'
 import { Icon } from '@iconify/vue'
 import HeroSection from '@/components/HeroSection.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
+import ResearchInterestGrid from '@/components/ResearchInterestGrid.vue'
 import SectionHeader from '@/components/SectionHeader.vue'
 import SkillGroup from '@/components/SkillGroup.vue'
-import { experience, profile, projects, skillGroups } from '@/data/profile'
+import { experience, profile, projects, researchInterests, skillGroups } from '@/data/profile'
 </script>
 
 <template>
@@ -47,6 +48,19 @@ import { experience, profile, projects, skillGroups } from '@/data/profile'
       <div class="skills-grid compact">
         <SkillGroup v-for="group in skillGroups.slice(0, 3)" :key="group.title" :group="group" />
       </div>
+    </section>
+
+    <section class="section">
+      <SectionHeader
+        eyebrow="Research profile"
+        title="Higher-study interests grounded in applied computing."
+        :description="profile.higherStudySummary"
+      />
+      <ResearchInterestGrid :interests="researchInterests.slice(0, 4)" />
+      <RouterLink class="button secondary section-action" to="/research">
+        <Icon icon="lucide:arrow-right" aria-hidden="true" />
+        View research profile
+      </RouterLink>
     </section>
 
     <section class="section surface">

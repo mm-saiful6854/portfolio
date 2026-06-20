@@ -6,24 +6,30 @@ export const profile = {
   phone: '+880 1521428565',
   linkedin: 'https://www.linkedin.com/in/md-saiful-islam-it-person/',
   github: 'https://github.com/mm-saiful6854',
+  googleScholar: 'https://scholar.google.com/saiful',
   resumeUrl: '/Md_Saiful_Islam_Resume_latest.pdf',
+  imageUrl: '/images/profile.png',
   summary:
     'Software engineer with 5+ years of experience building scalable cloud applications using Java, Spring Boot, Docker, and Kubernetes. Strong in fintech systems, distributed transactions, messaging, and production-ready backend services.',
+  higherStudySummary:
+    'Research-focused computer science graduate interested in human-computer interaction, IoT, medical imaging, machine learning, and software engineering. Published work includes gesture-controlled systems, assistive technology, and deep-learning-based review studies.',
   focusAreas: [
     'Fintech microservices',
     'Distributed transactions',
     'Cloud-native deployment',
     'High-volume data processing',
+    'HCI and assistive systems research',
   ],
   metrics: [
     { value: '5+', label: 'Years building production systems' },
     { value: '6+', label: 'Microservices managed for messaging platforms' },
+    { value: '4', label: 'Research publications' },
     { value: '377+', label: 'Competitive programming problems solved' },
-    { value: '3.64', label: 'CSE CGPA from KUET' },
   ],
   navigation: [
     { label: 'Home', to: '/' },
     { label: 'Experience', to: '/experience' },
+    { label: 'Research', to: '/research' },
     { label: 'Projects', to: '/projects' },
     { label: 'Skills', to: '/skills' },
     { label: 'Achievements', to: '/achievements' },
@@ -65,6 +71,19 @@ export const experience = [
       'Developed reusable Maven modules for cross-project integration in the Indian Airtel Customer Portal.',
     ],
   },
+  {
+    company: 'Ostad',
+    link: 'https://ostad.app/',
+    role: 'Vue.js Instructor',
+    period: 'Jul 2023 - Jan 2024',
+    location: 'Remote',
+    domain: 'Online learning platform',
+    stack: ['Vue.js', 'JavaScript', 'Frontend mentoring', 'Conceptual classes'],
+    highlights: [
+      'Conducted support and conceptual classes as a Vue.js instructor after Ostad launched its first Vue.js course.',
+      'Helped learners understand Vue fundamentals, component-driven development, and practical frontend workflows.',
+    ],
+  },
 ]
 
 export const projects = [
@@ -102,6 +121,75 @@ export const projects = [
     description:
       'A property marketplace with admin panel and user-facing interfaces for buying and selling houses.',
   },
+  {
+    title: 'Inventory Management System',
+    type: 'Business operations platform',
+    stack: ['Spring Boot', 'Vue.js', 'REST API'],
+    description:
+      'A product distributor management system for tracking warehouse operations, accounting, DSR workflows, and role-wise interfaces.',
+  },
+  {
+    title: 'Know Your Expenses',
+    type: 'Mobile family finance app',
+    stack: ['Flutter', 'Firebase Auth', 'Cloud Firestore'],
+    description:
+      'A mobile application where family members can record expenses and a family admin can track spending across the household.',
+  },
+]
+
+export const researchInterests = [
+  'HCI',
+  'Computer Networking',
+  'IoT',
+  'Software Engineering',
+  'Medical Imaging',
+  'Machine Learning',
+  'Data Science',
+]
+
+export const publications = [
+  {
+    title: 'Finger-Gesture Controlled Wheelchair with Enabling IoT',
+    authors: [
+      'Muhammad Sheikh Sadi',
+      'Mohammed Alotaibi',
+      'Md. Repon Islam',
+      'Md. Saiful Islam',
+      'Zaid Bassfar',
+    ],
+    venue: 'Sensors',
+    year: '2022',
+    link: null,
+  },
+  {
+    title: 'Towards Developing a Real-Time Hand Gesture Controlled Wheelchair',
+    authors: ['Md. Repon Islam', 'Md. Saiful Islam', 'Muhammad Sheikh Sadi'],
+    venue: 'SN Computer Science',
+    year: '2021',
+    link: null,
+  },
+  {
+    title: 'Deep Learning Based Systems Developed for Fall Detection: A Review',
+    authors: [
+      'Md. Milon Islam',
+      'Omar Tayan',
+      'Md. Repon Islam',
+      'Md. Saiful Islam',
+      'Sheikh Nooruddin',
+      'Muhammad Nomani Kabir',
+      'Md. Rabiul Islam',
+    ],
+    venue: 'IEEE Access',
+    year: '2020',
+    link: null,
+  },
+  {
+    title: 'An Efficient Human Computer Interaction through Hand Gesture Using Deep Convolutional Neural Network',
+    authors: ['Md. Milon Islam', 'Md. Repon Islam', 'Md. Saiful Islam'],
+    venue: 'SN Computer Science',
+    year: '2020',
+    link: null,
+  },
 ]
 
 export const skillGroups = [
@@ -119,7 +207,18 @@ export const skillGroups = [
   },
   {
     title: 'Machine Learning and Data',
-    skills: ['Scikit-learn', 'TensorFlow', 'OpenCV', 'NumPy', 'Matplotlib', 'NLP', 'CNN'],
+    skills: [
+      'Scikit-learn',
+      'Pandas',
+      'TensorFlow',
+      'OpenCV',
+      'NumPy',
+      'Matplotlib',
+      'NLP',
+      'CNN',
+      'Swarm Intelligence',
+      'Genetic Algorithm',
+    ],
   },
 ]
 
@@ -139,6 +238,7 @@ export const achievements = [
   {
     title: 'Awards',
     details: [
+      "Dean's Award criteria achieved in the last four semesters.",
       'ITEE Full Passer, 10th position.',
       'Cisco National Skill Competition final round.',
       'Intra KUET Programming Contest, 11th position.',
