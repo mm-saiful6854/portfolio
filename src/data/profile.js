@@ -34,6 +34,7 @@ export const profile = {
 export const experience = [
   {
     company: 'RedDot Digital Limited, Robi Axiata',
+    link: 'https://www.reddotdigitalit.com/',
     role: 'Senior Software Engineer',
     period: 'Feb 2025 - Present',
     location: 'Dhaka, Bangladesh',
@@ -49,6 +50,7 @@ export const experience = [
   },
   {
     company: 'Reve Systems Ltd.',
+    link: 'https://www.revesoft.com/',
     role: 'Software Engineer',
     period: 'Sep 2021 - Jan 2025',
     location: 'Dhaka, Bangladesh',

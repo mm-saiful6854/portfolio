@@ -17,7 +17,7 @@ defineProps({
       <div class="timeline-card">
         <p class="eyebrow">{{ item.domain }}</p>
         <h2>{{ item.role }}</h2>
-        <h3>{{ item.company }}</h3>
+        <h3><a :href="item.link" target="_blank" rel="noopener noreferrer">{{ item.company }}</a></h3>
         <ul>
           <li v-for="highlight in item.highlights" :key="highlight">{{ highlight }}</li>
         </ul>
