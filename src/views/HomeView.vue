@@ -53,7 +53,7 @@ import { experience, profile, projects, researchInterests, skillGroups } from '@
     <section class="section">
       <SectionHeader
         eyebrow="Research profile"
-        title="Higher-study interests grounded in applied computing."
+        title="Research interests grounded in applied computing."
         :description="profile.higherStudySummary"
       />
       <ResearchInterestGrid :interests="researchInterests.slice(0, 4)" />

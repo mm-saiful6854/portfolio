@@ -6,7 +6,7 @@ export const profile = {
   phone: '+880 1521428565',
   linkedin: 'https://www.linkedin.com/in/md-saiful-islam-it-person/',
   github: 'https://github.com/mm-saiful6854',
-  googleScholar: 'https://scholar.google.com/saiful',
+  googleScholar: 'https://scholar.google.com/citations?hl=en&user=ql4oAgwAAAAJ',
   resumeUrl: '/Md_Saiful_Islam_Resume_latest.pdf',
   imageUrl: '/images/profile.png',
   summary:
